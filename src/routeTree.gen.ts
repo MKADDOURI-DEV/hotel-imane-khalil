@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as BeniMellalRouteImport } from './routes/beni-mellal'
+import { Route as ChambresRouteImport } from './routes/chambres'
+import { Route as ConfidentialiteRouteImport } from './routes/confidentialite'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as GalerieRouteImport } from './routes/galerie'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as RestaurantRouteImport } from './routes/restaurant'
+import { Route as ServicesRouteImport } from './routes/services'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AProposRoute = AProposRouteImport.update({
+  id: '/a-propos',
+  path: '/a-propos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BeniMellalRoute = BeniMellalRouteImport.update({
+  id: '/beni-mellal',
+  path: '/beni-mellal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChambresRoute = ChambresRouteImport.update({
+  id: '/chambres',
+  path: '/chambres',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfidentialiteRoute = ConfidentialiteRouteImport.update({
+  id: '/confidentialite',
+  path: '/confidentialite',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalerieRoute = GalerieRouteImport.update({
+  id: '/galerie',
+  path: '/galerie',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RestaurantRoute = RestaurantRouteImport.update({
+  id: '/restaurant',
+  path: '/restaurant',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/beni-mellal': typeof BeniMellalRoute
+  '/chambres': typeof ChambresRoute
+  '/confidentialite': typeof ConfidentialiteRoute
+  '/contact': typeof ContactRoute
+  '/galerie': typeof GalerieRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/restaurant': typeof RestaurantRoute
+  '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/beni-mellal': typeof BeniMellalRoute
+  '/chambres': typeof ChambresRoute
+  '/confidentialite': typeof ConfidentialiteRoute
+  '/contact': typeof ContactRoute
+  '/galerie': typeof GalerieRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/restaurant': typeof RestaurantRoute
+  '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/beni-mellal': typeof BeniMellalRoute
+  '/chambres': typeof ChambresRoute
+  '/confidentialite': typeof ConfidentialiteRoute
+  '/contact': typeof ContactRoute
+  '/galerie': typeof GalerieRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/restaurant': typeof RestaurantRoute
+  '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/a-propos'
+    | '/beni-mellal'
+    | '/chambres'
+    | '/confidentialite'
+    | '/contact'
+    | '/galerie'
+    | '/mentions-legales'
+    | '/restaurant'
+    | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/a-propos'
+    | '/beni-mellal'
+    | '/chambres'
+    | '/confidentialite'
+    | '/contact'
+    | '/galerie'
+    | '/mentions-legales'
+    | '/restaurant'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-propos'
+    | '/beni-mellal'
+    | '/chambres'
+    | '/confidentialite'
+    | '/contact'
+    | '/galerie'
+    | '/mentions-legales'
+    | '/restaurant'
+    | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AProposRoute: typeof AProposRoute
+  BeniMellalRoute: typeof BeniMellalRoute
+  ChambresRoute: typeof ChambresRoute
+  ConfidentialiteRoute: typeof ConfidentialiteRoute
+  ContactRoute: typeof ContactRoute
+  GalerieRoute: typeof GalerieRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
+  RestaurantRoute: typeof RestaurantRoute
+  ServicesRoute: typeof ServicesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/a-propos': {
+      id: '/a-propos'
+      path: '/a-propos'
+      fullPath: '/a-propos'
+      preLoaderRoute: typeof AProposRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/beni-mellal': {
+      id: '/beni-mellal'
+      path: '/beni-mellal'
+      fullPath: '/beni-mellal'
+      preLoaderRoute: typeof BeniMellalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chambres': {
+      id: '/chambres'
+      path: '/chambres'
+      fullPath: '/chambres'
+      preLoaderRoute: typeof ChambresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/confidentialite': {
+      id: '/confidentialite'
+      path: '/confidentialite'
+      fullPath: '/confidentialite'
+      preLoaderRoute: typeof ConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galerie': {
+      id: '/galerie'
+      path: '/galerie'
+      fullPath: '/galerie'
+      preLoaderRoute: typeof GalerieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/restaurant': {
+      id: '/restaurant'
+      path: '/restaurant'
+      fullPath: '/restaurant'
+      preLoaderRoute: typeof RestaurantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AProposRoute: AProposRoute,
+  BeniMellalRoute: BeniMellalRoute,
+  ChambresRoute: ChambresRoute,
+  ConfidentialiteRoute: ConfidentialiteRoute,
+  ContactRoute: ContactRoute,
+  GalerieRoute: GalerieRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
+  RestaurantRoute: RestaurantRoute,
+  ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
