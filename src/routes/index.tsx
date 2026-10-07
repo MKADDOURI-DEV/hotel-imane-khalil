@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BedDouble, Coffee, Wifi, MapPin, Star } from "lucide-react";
+import { BedDouble, Coffee, ConciergeBell, MapPin, Star } from "lucide-react";
 import { SITE } from "@/lib/site-config";
 import { seo } from "@/lib/seo";
 import { btnOutline, btnPrimary, ContactCta, Notice, PhotoPlaceholder, Section } from "@/components/site/ui";
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
 const highlights = [
   { icon: BedDouble, title: "Chambres", text: "Des chambres simples et confortables pour votre séjour.", to: "/chambres" },
   { icon: Coffee, title: "Restaurant & café", text: "Un espace pour prendre un repas ou un café sur place.", to: "/restaurant" },
-  { icon: Wifi, title: "Services", text: "Les services pensés pour faciliter votre séjour.", to: "/services" },
+  { icon: ConciergeBell, title: "Services", text: "Les services pensés pour faciliter votre séjour.", to: "/services" },
   { icon: MapPin, title: "Béni Mellal", text: "Découvrez la ville et ses environs.", to: "/beni-mellal" },
 ] as const;
 
